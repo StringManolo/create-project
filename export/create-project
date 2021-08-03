@@ -9,6 +9,7 @@ const getPrefixPath = async () => {
       if (err) {
 	reject(err);
       } else {
+	res.pop(); // remove line break
 	resolve(res);
       }
     });
