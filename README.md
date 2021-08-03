@@ -2,7 +2,7 @@
 
 ### Install
 ```
-git clone https://github.com/StringManolo/create-project && chmod +775 create-project/export/create-project && mv create-project/export/create-project "$PREFIX/bin" && mv create-project/export/create-project-templates "$PREFIX/include/" && yes | rm create-project -r
+rm "$PREFIX/include/create-project-templates" "$PREFIX/bin/create-project" 2>&1 > /dev/null ; git clone https://github.com/StringManolo/create-project && chmod +775 create-project/export/create-project && mv create-project/export/create-project "$PREFIX/bin" && mv create-project/export/create-project-templates "$PREFIX/include/" && yes | rm create-project -r
 ```
 
 ### Usage
