@@ -85,7 +85,7 @@ const loadFile = async filename => {
 
 const getDescription = async path => {
   return new Promise( async (resolve, reject) => {
-    const file = await loadFile(path);
+    let file = await loadFile(path);
     if (file === false) {
       const addDescription = ask(`No description avaialble for ${path} template, do you want to add a description? y/n: `);
       if (/y/gi.test(addDescription)) {
