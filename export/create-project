@@ -155,7 +155,7 @@ const getSelectedOptions = () => {
       case "remove":
       case "--remove":
 	selected.remove = next;
-	return remove;
+	return selected;
       break;
 
       default:
