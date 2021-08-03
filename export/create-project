@@ -121,8 +121,17 @@ const getSelectedOptions = () => {
       console.log(`  ${filename} - ${description}`);
     }
   } else if (options.create) {
-    // remove ./ if found at start
+    // remove "/" at the end
+    if (options.create[options.create.length-1] === "/") {
+      options.create = options.create.substr(0, options.create.length - 1);
+    }
 
+    if (/\//g.test(options.create)) {
+      options.create = options.create.split("/");
+      options.create = options.create[options.create.length - 1];
+    }
+
+    console.log("Filename: " + options.create);
 
   } else if (options.templates) {
     options.templates.shift();
