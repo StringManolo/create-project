@@ -27,6 +27,46 @@ const readdir = async path => {
   });
 }
 
+const open = (filename, mode) => {
+  const fd = {};
+  fd.internalFd = fs.openSync(filename, mode);
+  fd.read = (buffer, position, len) => fs.readSync(fd.internalFd, buffer, position, len);
+  fd.puts = (str) => fs.writeSync(fd.internalFd, str);
+  fd.close = () => fs.closeSync(fd.internalFd);
+  return fd;
+}
+
+const dumpOnFile = (filename, text) => {
+  const fd = open(filename, "a+");
+  fd.puts(text);
+  fd.close();
+}
+
+const output = text => {
+  const fd = open("/dev/stdout", "w");
+  fd.puts(text);
+  fd.close();
+}
+
+const input = () => {
+  let rtnval = "";
+  let buffer = Buffer.alloc ? Buffer.alloc(1) : new Buffer(1);
+  for(;;) {
+    fs.readSync(0, buffer, 0, 1);
+    if(buffer[0] === 10) {
+      break;
+    } else if(buffer[0] !== 13) {
+      rtnval += new String(buffer);
+    }
+  }
+  return rtnval;
+}
+
+const ask = question => {
+  output(question);
+  return input();
+}
+
 
 const get7zFiles = files => files.filter(file => file.substr(file.length-3, file.length-1) === ".7z");
 
@@ -34,7 +74,7 @@ const loadFile = async filename => {
   return new Promise( (resolve, reject) => {
     filename = fs.readFile(filename, "utf-8", (err, file) => {
       if (err) {
-        reject(err);
+        resolve(false);
       } else {
         resolve(file);
       }
@@ -46,6 +86,16 @@ const loadFile = async filename => {
 const getDescription = async path => {
   return new Promise( async (resolve, reject) => {
     const file = await loadFile(path);
+    if (file === false) {
+      const addDescription = ask(`No description avaialble for ${path} template, do you want to add a description? y/n: `);
+      if (/y/gi.test(addDescription)) {
+        const newDescription = ask(`\nAdd your new description: `);
+        console.log(`Adding ${newDescription} to template ${path}`);
+	dumpOnFile(path, newDescription);
+      }
+    }
+
+
     resolve(file);
   });
 }
