@@ -38,7 +38,7 @@ const open = (filename, mode) => {
 
 const dumpOnFile = (filename, text) => {
   const fd = open(filename, "a+");
-  fd.puts(text.substr(0, text.length-1));
+  fd.puts(text);
   fd.close();
 }
 
@@ -92,7 +92,9 @@ const getDescription = async path => {
         const newDescription = ask(`\nAdd your new description: `);
         console.log(`Adding ${newDescription} to template ${path}`);
 	dumpOnFile(path, newDescription);
+	file = newDescription;
       }
+      file = "No description";
     }
 
 
@@ -166,6 +168,7 @@ const getSelectedOptions = () => {
     const files = get7zFiles(await readdir(path));
     console.log("Available Templates:");
     for (let i in files) {
+console.log(`Printing (${files[i]})`);
       const filename = files[i].substr(0, files[i].length - 3);
       const description = await getDescription(`${path}/${filename}.description`);
       console.log(`  ${filename} - ${description}`);
