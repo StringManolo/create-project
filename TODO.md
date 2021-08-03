@@ -5,3 +5,9 @@
   - Dest folder
   - Default template replacements (using mustache sintax?)
   - Autoupdate on execution
+  - Colored Output
+  - Select other compresion algorithm
+  - No compresion
+- Backups
+- Exports
+- Imports
