@@ -38,7 +38,7 @@ const open = (filename, mode) => {
 
 const dumpOnFile = (filename, text) => {
   const fd = open(filename, "a+");
-  fd.puts(text);
+  fd.puts(text.substr(0, text.length-1));
   fd.close();
 }
 
