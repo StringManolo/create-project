@@ -131,7 +131,9 @@ const getSelectedOptions = () => {
       options.create = options.create[options.create.length - 1];
     }
 
-    console.log("Filename: " + options.create);
+    const res = await createTemplate(options.create):
+    console.log(res);
+    console.log("Template Created");
 
   } else if (options.templates) {
     options.templates.shift();
