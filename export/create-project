@@ -239,7 +239,7 @@ const getSelectedOptions = () => {
 	if (options.templates[i] === filename) {
           const res = await extractFiles(filename);
 	  console.log(res);
-          console.log("Project Created");
+          console.log(`${filename} generated.`);
 	}
       }
     }
