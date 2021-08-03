@@ -168,11 +168,13 @@ const getSelectedOptions = () => {
     const files = get7zFiles(await readdir(path));
     console.log("Available Templates:");
     for (let i in files) {
-console.log(`Printing (${files[i]})`);
       const filename = files[i].substr(0, files[i].length - 3);
       const description = await getDescription(`${path}/${filename}.description`);
+      if (description[description.length-1] === "\n") {
+	console.log("Removing linebreak");
+        description = description.substr(0, description.length - 1);
+      }
       console.log(`  ${filename} - ${description}`);
-      console.log("Line break before here???");
     }
   } else if (options.create) {
     // remove "/" at the end
