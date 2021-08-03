@@ -20,7 +20,7 @@ create-project list
 create-project basic-web
 ```
 
-+ Create your custom template
++ Create your custom template from an existing folder
 ```
 create-project create ./myFolder
 ```
