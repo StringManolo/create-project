@@ -182,7 +182,7 @@ const getSelectedOptions = () => {
   const prefix = await getPrefixPath();
   const options = getSelectedOptions();
   console.log(`OPTIONS:
-${options}
+${JSON.stringify(options, null, 2)}
 `);
   if (options.list) {
     const path = `${prefix}/include/create-project-templates`;
