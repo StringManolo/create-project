@@ -169,7 +169,7 @@ const getSelectedOptions = () => {
     console.log("Available Templates:");
     for (let i in files) {
       const filename = files[i].substr(0, files[i].length - 3);
-      const description = await getDescription(`${path}/${filename}.description`);
+      let description = await getDescription(`${path}/${filename}.description`);
       if (description[description.length-1] === "\n") {
 	console.log("Removing linebreak");
         description = description.substr(0, description.length - 1);
