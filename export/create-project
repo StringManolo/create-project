@@ -131,7 +131,7 @@ const getSelectedOptions = () => {
       options.create = options.create[options.create.length - 1];
     }
 
-    const res = await createTemplate(options.create):
+    const res = await createTemplate(options.create);
     console.log(res);
     console.log("Template Created");
 
