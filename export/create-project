@@ -172,6 +172,7 @@ console.log(`Printing (${files[i]})`);
       const filename = files[i].substr(0, files[i].length - 3);
       const description = await getDescription(`${path}/${filename}.description`);
       console.log(`  ${filename} - ${description}`);
+      console.log("Line break before here???");
     }
   } else if (options.create) {
     // remove "/" at the end
