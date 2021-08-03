@@ -1,10 +1,5 @@
 
-- Command to create new templates
-- Rm old folders to allow install when already installed.
-- Usage argument
-- Help argument
 - Upload to npm
-- Uninstall argument
 - Update argument
 - Config file
   - Dest folder
