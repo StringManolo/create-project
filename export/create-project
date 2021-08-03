@@ -131,6 +131,9 @@ const createTemplate = async filename => {
 const getSelectedOptions = () => {
   const selected = {};
   const args = process.argv;
+  if (args.length == 2) {
+    return selected;
+  }
   for (let i in args) {
     const actual = args[i];
     const next = args[+i + 1];
@@ -148,6 +151,13 @@ const getSelectedOptions = () => {
       case "--create":
 	selected.create = next;
 	return selected;
+      break;
+
+      case "h":
+      case "-h":
+      case "help":
+      case "--help":
+	return {};
       break;
 
       case "r":
@@ -233,6 +243,22 @@ const getSelectedOptions = () => {
 	}
       }
     }
+  } else {
+    console.log(`
+List available templates:
+  create-project list
+
+Generate template:
+  create-project basic-web
+
+Create your custom template:
+  create-project create ./myFolder
+
+Remove a template:
+  create-project remove myFolder
+`);
+
+
   }
 
 
