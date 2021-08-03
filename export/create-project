@@ -63,6 +63,19 @@ const extractFiles = async filename => {
   });
 }
 
+const createTemplate = async filename => {
+  const prefix = await getPrefixPath();
+  return new Promise( (resolve, reject) => {
+    child_process.exec(`7z a "${prefix}/include/create-project-templates/${filename}.7z" "./${filename}"`, (err, res) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(res);
+      }
+    });
+  });
+}
+
 const getSelectedOptions = () => {
   const selected = {};
   const args = process.argv;
@@ -75,6 +88,14 @@ const getSelectedOptions = () => {
       case "list":
       case "--list":
 	selected.list = true;
+      break;
+
+      case "c":
+      case "-c":
+      case "create":
+      case "--create":
+	selected.create = next;
+	return selected;
       break;
 
       default:
@@ -99,6 +120,10 @@ const getSelectedOptions = () => {
       const description = await getDescription(`${path}/${filename}.description`);
       console.log(`  ${filename} - ${description}`);
     }
+  } else if (options.create) {
+    // remove ./ if found at start
+
+
   } else if (options.templates) {
     options.templates.shift();
     options.templates.shift();
