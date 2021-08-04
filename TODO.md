@@ -1,4 +1,3 @@
-- Test file not exists before extract and ask user
 - Upload to npm
 - Update argument
 - Config file

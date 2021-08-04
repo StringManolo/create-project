@@ -105,7 +105,7 @@ const getDescription = async path => {
 const extractFiles = async filename => {
   const prefix = await getPrefixPath();
   return new Promise( (resolve, reject) => {
-    child_process.exec(`7z x "${prefix}/include/create-project-templates/${filename}.7z" -o"./"`, (err, res) => {
+    child_process.exec(`echo "u" | 7z x "${prefix}/include/create-project-templates/${filename}.7z" -o"./"`, (err, res) => {
       if (err) {
         reject(err);
       } else {
@@ -206,7 +206,7 @@ const getSelectedOptions = () => {
     }
 
     const res = await createTemplate(options.create);
-    console.log(res);
+    //console.log(res);
     console.log("Template Created");
 
   } else if (options.remove) {
@@ -238,14 +238,8 @@ console.log(`Removed args`);
       for (let j in files) {
         const filename = files[j].substr(0, files[j].length - 3);
 	if (options.templates[i] === filename) {
-console.log("Trying to extract files");
-	  let res;
-	  try {
-            res = await extractFiles(filename);
-	  } catch(err) {
-            console.log("Catched error");
-	  }
-	  console.log(res);
+          const res = await extractFiles(filename);
+	  //console.log(res);
           console.log(`${filename} generated.`);
 	}
       }
