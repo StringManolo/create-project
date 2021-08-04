@@ -1,4 +1,4 @@
-
+- Test file not exists before extract and ask user
 - Upload to npm
 - Update argument
 - Config file
@@ -11,3 +11,6 @@
 - Backups
 - Exports
 - Imports
+- Docu comand
+- Documentation to all templates available on repo or into command
+- Build command
