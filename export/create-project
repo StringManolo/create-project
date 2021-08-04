@@ -231,7 +231,6 @@ const getSelectedOptions = () => {
   } else if (options.templates) {
     options.templates.shift();
     options.templates.shift();
-console.log(`Removed args`);
     const path = `${prefix}/include/create-project-templates`;
     const files = get7zFiles(await readdir(path));
     for (let i in options.templates) {
