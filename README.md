@@ -38,6 +38,7 @@ Available Templates:
 | basic-three | Three.js basic animation. Include three.js v69, index.html, main.js and index.css |
 | basic-web | index.html, main.js and index.css files |
 | express | Require, get and bind express.js file |
+| htm-preact | Use HTM (Similar to JSX but without the compiling step) and Preact (A 3Kb version of React) |
 | index.css | Basic body styles like remove margin, and some properties as example | 
 | index.html | Basic html file with data:favicon, root element, and link to css and js files |
 | main.c | Include stdio, int main(args) and return 0 |
