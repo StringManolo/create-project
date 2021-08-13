@@ -37,6 +37,7 @@ Available Templates:
 | basic-jsx | Use JSX in your javascript projects. Also allows CSS-IN-JS |
 | basic-three | Three.js basic animation. Include three.js v69, index.html, main.js and index.css |
 | basic-web | index.html, main.js and index.css files |
+| express | Require, get and bind express.js file |
 | index.css | Basic body styles like remove margin, and some properties as example | 
 | index.html | Basic html file with data:favicon, root element, and link to css and js files |
 | main.c | Include stdio, int main(args) and return 0 |
