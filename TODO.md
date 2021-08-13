@@ -7,9 +7,10 @@
   - Colored Output
   - Select other compresion algorithm
   - No compresion
-- Backups
+- Backups (Use tar before 7z to keep group/ownership)
 - Exports
 - Imports
 - Docu comand
 - Documentation to all templates available on repo or into command
 - Build command
+- Include script execution on extraction to allow custom templates per user
