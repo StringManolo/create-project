@@ -33,13 +33,24 @@ create-project remove myFolder
 ### Included Templates
 Available Templates:  
   basic-jsx - Use JSX in your javascript projects. Also allows CSS-IN-JS  
+
   basic-three - Three.js basic animation. Include three.js v69, index.html, main.js and index.css  
+
   basic-web - index.html, main.js and index.css files  
+
   index.css - Basic body styles like remove margin, and some properties as example  
+
   index.html - Basic html file with data:favicon, root element, and link to css and js files  
+
   main.c - Include stdio, int main(args) and return 0  
+
   main.cpp - Include iostream, using namespace std, int main(args), cin.get and return 0  
+
   main.go - Package main, import fmt and func main  
+
   main.js - Some predefined functions to code faster  
+
   main.rs - fn main and print a message  
+
   normalize.css - Corrects bugs and common browser inconsistencies and normalizes styles for a wide range of elements  
+
