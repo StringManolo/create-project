@@ -14,3 +14,4 @@
 - Documentation to all templates available on repo or into command
 - Build command
 - Include script execution on extraction to allow custom templates per user
+- Remove "rm: cannot remove './create-project': No such file or directory" from output on install
