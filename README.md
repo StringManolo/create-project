@@ -47,4 +47,4 @@ Available Templates:
 | main.js | Some predefined functions to code faster |
 | main.rs | fn main and print a message |
 | normalize.css | Corrects bugs and common browser inconsistencies and normalizes styles for a wide range of elements |
-
+| qjs-cli | Create QuickJS cli app. Include function to run OS commands, cli colors, arguments parsing and prompting user for input |
