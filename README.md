@@ -36,6 +36,7 @@ Available Templates:
 | --- | --- |
 | basic-jsx | Use JSX in your javascript projects. Also allows CSS-IN-JS |
 | basic-three | Three.js basic animation. Include three.js v69, index.html, main.js and index.css |
+| basic-vue-cdn | Vue and VueRouter (unpkg cdn scripts) with header, footer components, nav,  and home + about views | 
 | basic-web | index.html, main.js and index.css files |
 | express | Require, get and bind express.js file |
 | htm-preact | Use HTM (Similar to JSX but without the compiling step) and Preact (A 3Kb version of React) |
