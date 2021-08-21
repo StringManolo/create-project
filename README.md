@@ -40,6 +40,7 @@ Available Templates:
 | basic-web | index.html, main.js and index.css files |
 | basic-web-files | index.html, main.js and index.css files extracted on current folder |
 | express | Require, get and bind express.js file |
+| htm-preact-router | Use HTM (Similar to JSX but without the compiling step), Preact (A 3Kb version of React)) and Preact-Router |
 | htm-preact | Use HTM (Similar to JSX but without the compiling step) and Preact (A 3Kb version of React) |
 | index.css | Basic body styles like remove margin, and some properties as example | 
 | index.html | Basic html file with data:favicon, root element, and link to css and js files |
