@@ -20,4 +20,10 @@ createProjectAddPath "$PREFIX/bin/";
 ' >> "$HOME/.bashrc"
 
 
-PREFIX="$HOME/data/data/com.termux/files/usr" && yes | rm "./create-project" "$PREFIX/include/create-project-templates" "$PREFIX/bin/create-project" -r 2>&1 > /dev/null; git clone https://github.com/StringManolo/create-project && chmod +775 create-project/export/create-project && mkdir -p "$PREFIX/bin" && mv create-project/export/create-project "$PREFIX/bin/" && mv create-project/export/create-project-templates "$PREFIX/include/" && yes | rm create-project -r;
+PREFIX="$HOME/data/data/com.termux/files/usr" && yes | rm "./create-project" "$PREFIX/include/create-project-templates" "$PREFIX/bin/create-project" -r 2>&1 > /dev/null;
+git clone https://github.com/StringManolo/create-project;
+chmod +775 create-project/export/create-project/;
+mkdir -p "$PREFIX/bin";
+mv create-project/export/create-project "$PREFIX/bin/";
+mv create-project/export/create-project-templates "$PREFIX/include/";
+yes | rm create-project -r;
