@@ -5,6 +5,15 @@ Easy way to create project folder structures and default files for fast developm
 
 
 ### Install
+
+
+Linux:
+```
+git clone https://github.com/stringmanolo/create-project && bash install-create-project-linux.sh
+```
+
+
+Termux:
 ```
 yes | rm "./create-project" "$PREFIX/include/create-project-templates" "$PREFIX/bin/create-project" -r 2>&1 > /dev/null ; git clone https://github.com/StringManolo/create-project && chmod +775 create-project/export/create-project && mv create-project/export/create-project "$PREFIX/bin" && mv create-project/export/create-project-templates "$PREFIX/include/" && yes | rm create-project -r
 ```
