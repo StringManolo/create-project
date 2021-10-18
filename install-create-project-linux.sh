@@ -39,6 +39,9 @@ mkdir -p "$PREFIX/bin";
 echo "Moving command to bin folder..."
 mv create-project/export/create-project "$PREFIX/bin/";
 
+echo "Creating include folder to hold templates...";
+mkdir -p "$PREFIX/include/";
+
 echo "Moving default templates to include folder...";
 mv create-project/export/create-project-templates "$PREFIX/include/";
 
