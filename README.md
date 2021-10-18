@@ -9,7 +9,7 @@ Easy way to create project folder structures and default files for fast developm
 
 Linux:
 ```
-git clone https://github.com/stringmanolo/create-project && bash create-project/install-create-project-linux.sh
+git clone https://github.com/stringmanolo/create-project && bash create-project/install-create-project-linux.sh && source ~/.bashrc";
 ```
 
 

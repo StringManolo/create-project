@@ -12,4 +12,4 @@ PREFIX="$HOME/data/data/com.termux/files/usr" && yes | rm "./create-project" "$P
 export PREFIX="$PREFIX";
 
 addPath "$PREFIX/bin/";
-' >> "$HOME/.bashrc" && source "$HOME/.bashrc";
+' >> "$HOME/.bashrc"
