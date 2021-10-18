@@ -26,4 +26,4 @@ chmod +775 create-project/export/create-project/;
 mkdir -p "$PREFIX/bin";
 mv create-project/export/create-project "$PREFIX/bin/";
 mv create-project/export/create-project-templates "$PREFIX/include/";
-yes | rm create-project -r;
+# yes | rm create-project -r;
